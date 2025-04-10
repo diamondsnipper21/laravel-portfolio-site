@@ -6,21 +6,20 @@ use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class profileUpdateRequest extends FormRequest
+class ProfileUpdateRequest extends FormRequest
 {
-
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, mixed>
+     * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
-    public function rules()
+    public function rules(): array
     {
-        $allowedExtensions = 'jpeg,jpg,png,svg,webp';
+        $allowedExtensions = 'jpeg,jpg,png,svg';
         return [
-            'name' => ['required', 'string', 'max:100'],
-            'email' => ['required', 'email', Rule::unique(User::class)->ignore($this->user()->id)],
-            'image' => ['image', 'mimes:'.  $allowedExtensions, 'max:4096']
+            'name' => ['string', 'max:255'],
+            'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+            'image' => ['image', 'mimes:' . $allowedExtensions, 'max:4096']
         ];
     }
 }
