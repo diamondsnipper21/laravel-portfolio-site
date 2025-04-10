@@ -1,3 +1,15 @@
+
+# Laravel Portfolio Website
+
+Welcome to my personal portfolio website! This is a project built using **Laravel**, where I developed the backend to showcase my skills, projects, and experiences. 
+
+## Features
+- **Dynamic Content Management**: The backend is powered by Laravel's robust features, providing easy content updates via a custom CMS.
+- **Admin Dashboard**: A user-friendly admin panel allows you to manage website content effortlessly.
+- **Modern Design**: The website is designed to be responsive and visually appealing, ensuring a great experience across devices.
+- **Secure Authentication**: Implements Laravel's built-in authentication features to ensure secure access to admin functions.
+
+
 <br/>
 
 ## Table Of Contents
